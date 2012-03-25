@@ -19,6 +19,12 @@ To install the driver for use in any/multiple application(s)
 	cd ROOT/plugins
 	git clone git://github.com/ichikaway/cakephp-mongodb.git mongodb
 	
+### Cake 2.0 Installation
+
+Update /app/Config/bootstrap.php, add this line at the end of the file:
+
+	CakePlugin::load('Mongodb');
+	
 ## Sample Code
 
 To use this DB driver, install (obviously) and define a db source such as follows:
