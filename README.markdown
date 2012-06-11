@@ -23,7 +23,7 @@ To install the driver for use in any/multiple application(s)
 
 Update /app/Config/bootstrap.php, add this line at the end of the file:
 
-	CakePlugin::load('Mongodb');
+	CakePlugin::load('mongodb');
 	
 ## Sample Code
 
@@ -34,7 +34,7 @@ To use this DB driver, install (obviously) and define a db source such as follow
 	class DATABASE_CONFIG {
 
 		public $mongo = array(
-			'driver' => 'mongodb.mongodbSource',
+			'datasource' => 'mongodb.mongodbSource',
 			'database' => 'driver',
 			'host' => 'localhost',
 			'port' => 27017,
