@@ -48,6 +48,12 @@ Model files need to have mongoSchema property - or make use of the schemaless be
 
 Mongo uses a primary key named "\_id" (cannot be renamed). It can be any format you like but if you don't explicitly set it Mongo will use an automatic 24 character (uu)id.
 
+To use the "\_id" as the default primary key in CakePHP, change the `$primaryKey` property to "\_id" in your model or in the AppModel.
+
+	class AppModel extends Model {
+		public $primaryKey = '_id';
+	}
+
 Before you start, you may find it useful to see [a model sample.](http://github.com/ichikaway/mongoDB-Datasource/blob/master/samples/models/post.php)
 There are also some sample [controller actions: find,save,delete,deleteAll,updateAll](http://github.com/ichikaway/mongoDB-Datasource/blob/master/samples/controllers/posts_controller.php) note that your controller code needs no specific code to use this datasource.
 
